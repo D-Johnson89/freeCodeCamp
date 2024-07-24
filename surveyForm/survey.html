@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="header">
+        <h1 id="title">Gamer Placement Survey</h1>
+        <p id="description">Help us match you with the right interests and skill levels</p>
+    </div>
+    <form id="survey-form">
+        <fieldset>
+            <label id="name-label" for="name">Name<input id="name" name="name" type="text" placeholder="Enter your name" required/></label>
+            <label id="email-label" for="email">Email<input id="email" name="email" type="email" placeholder="Enter your email" required/></label>
+            <label id="number-label" for="number">Day<input id="number" name="number" type="number" placeholder="Date" min="1" max="31" required/></label>
+            <label id="month-label" for="month">Month<input id="month" name="month" type="month" placeholder="Month" required/></label>
+        </fieldset>
+        <fieldset>
+            <label for="status">Gamer Status/Skill levels
+                <select id="status" name="status">
+                    <option value="">(select one)</option>
+                    <option value="1">Noob</option>
+                    <option value="2">Casual</option>
+                    <option value="3">Sweat</option>
+                    <option value="4">Pro</option>
+                </select>
+            </label>
+            <legend>Platform(required)</legend>
+            <label for="nintendo"><input id="nintendo" type="radio" name="platform" class="inline" value="nintendo" checked />Nintendo</label>
+            <label for="xbox"><input id="xbox" type="radio" name="platform" class="inline" value="xbox" />XBOX</label>
+            <label for="playstation"><input id="playstation" type="radio" name="platform" class="inline" value="playstation" />Play Station</label>
+            <label for="pc"><input id="pc" type="radio" name="platform" class="inline" value="pc" />PC</label>
+            <legend>Game Genres</legend>
+            <label for="action-adventure"><input type="checkbox" id="action-adventure" name="action-adventure" class="inline" value="action-adventure" />Action/Adventure</label>
+            <label for="puzzle-strategy"><input type="checkbox" id="puzzle-strategy" name="puzzle-strategy" class="inline" value="puzzle-strategy" />Puzzle/Strategy</label>
+            <label for="mmo-rpg-openworld"><input type="checkbox" id="mmo-rpg-openworld" name="mmo-rpg-openworld" class="inline" value="mmo-rpg-openworld" />MMO/RPG/Open World</label>
+            <label for="shooter"><input type="checkbox" id="shooter" name="shooter" class="inline" value="shooter" />Shooter Games</label>
+            <label for="racing"><input type="checkbox" id="racing" name="racing" class="inline" value="racing" />Racing Games</label>
+            <legend>Top 3 Favorite Games (optional)</legend>
+            <label for="game1"><textarea id="game1" name="game1" rows="2" cols="30" placeholder="Top favorite game"></textarea></label>
+            <label for="game2"><textarea id="game2" name="game2" rows="2" cols="30" placeholder="Second favorite game"></textarea></label>
+            <label for="game3"><textarea id="game3" name="game3" rows="2" cols="30" placeholder="Third favorite game"></textarea></label>
+        </fieldset>
+        <input id="submit" type="submit" value="submit" />
+    </form>
+</body>
+</html>
