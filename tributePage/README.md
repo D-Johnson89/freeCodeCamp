@@ -1,0 +1,1 @@
+Tribute Page for "". This tribute page is the second required project from [freeCodeCamp](https://www.freecodecamp.org)'s Responsive Web Design certificate course.
