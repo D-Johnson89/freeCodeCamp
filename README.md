@@ -7,9 +7,11 @@ Below are the projects and the links to the projects at freeCodeCamp, I may add 
 
 ### [Survey Form](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form)
 
-My [survey form](https://github.com/D-Johnson89/freeCodeCamp/tree/main/surveyForm) is a gamer skill and interst form.
+My [survey form](https://github.com/D-Johnson89/freeCodeCamp/tree/main/surveyForm) is a gamer skill and interest form.
 
 ### [Tribute Page](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-tribute-page-project/build-a-tribute-page)
+
+My [tribute page](https://github.com/D-Johnson89/freeCodeCamp/tree/main/tributePage) is about Dr. Stephen Hawking.
 
 ### [Technical Documentation Page](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-technical-documentation-page-project/build-a-technical-documentation-page)
 
