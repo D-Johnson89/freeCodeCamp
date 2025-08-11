@@ -1,1 +1,1 @@
-Gamer Survey for "skill ranking" and interest matching. This survey is the first required project from [freeCodeCamp](https://www.freecodecamp.org)'s Responsive Web Design certificate course.
+Gamer Survey for "skill ranking" and interest matching. This survey is the first required project from [freeCodeCamp](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-survey-form-project/build-a-survey-form)'s Responsive Web Design certificate course.

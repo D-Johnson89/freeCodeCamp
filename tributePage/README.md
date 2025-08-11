@@ -1,1 +1,1 @@
-Tribute Page for "Dr. Stephen Hawking". This tribute page is the second required project from [freeCodeCamp](https://www.freecodecamp.org)'s Responsive Web Design certificate course.
+Tribute Page for "Dr. Stephen Hawking". This tribute page is the second required project from [freeCodeCamp](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-tribute-page-project/build-a-tribute-page)'s Responsive Web Design certificate course.
