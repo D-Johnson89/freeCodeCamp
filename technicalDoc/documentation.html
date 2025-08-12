@@ -45,9 +45,10 @@
                 <li class="stylesheets">
                     <h3>External StyleSheets</h3>
                     <p>Let's start with applying CSS with external stylesheets. You will need to add it in the head <code>(&lt;head&gt;&lt;/head&gt;)</code> section. First you will need to add the link tag with a relationship and location in the rel and href properties respectively.</p>
-                    <p>It should look like this:<br>
-                    <code>&lt;link rel="stylessheet" href="styles.css" /&gt;</code></p>
-                    <p>Remember, it must be placed inside the head section. To actually see some style take effect, let's add something to your CSS. Inside your styles.css file, add the following code:<br>
+                    <p>It should look like this:
+                    <pre><code>&lt;link rel="stylessheet" href="styles.css" /&gt;</code></pre>
+                    </p>
+                    <p>Remember, it must be placed inside the head section. To actually see some style take effect, let's add something to your CSS. Inside your styles.css file, add the following code:
                     <pre><code>
                     body {
                         background-color: yellow;    
@@ -57,19 +58,19 @@
                 <li class="style_section">
                     <h3>Style Section</h3>
                     <p>Next we will look at adding your styles to a style setion in the head section of the document, also called internal stylesheets.</p>
-                    <p>This will look somethin like this:<br />
+                    <p>This will look somethin like this:
                     <pre><code>
-                        &lt;head&gt;
-                            &lt;style&gt;
-                                body {
-                                    background-color: yellow;
-                                }
+                    &lt;head&gt;
+                        &lt;style&gt;
+                            body {
+                                background-color: yellow;
+                            }
 
-                                h1 {
-                                    color: purple;
-                                }
-                            &lt;/style&gt;
-                        &lt;/head&gt;
+                            h1 {
+                                color: purple;
+                            }
+                        &lt;/style&gt;
+                    &lt;/head&gt;
                     </code></pre>
                     </p>
                     <p>There are times when using an internal stylesheet can be useful, maybe you just need a quick jist of some styleto use wjile working on your project before doing the main stylesheet. There may also be situations where you areblocked from modifying the external stylesheets, like when working with content management systems.</p>
@@ -78,19 +79,19 @@
                 <li class="inline_styles">
                     <h3>Inline Styles</h3>
                     <p>The last way we will look at add CSS to a project is using inline styles. Inline styles are typically applied with a style attribute, and only affect the HTML element applied to.</p>
-                    <p>Using inline styles will look something like this:<br/>
+                    <p>Using inline styles will look something like this:
                     <pre><code>
-                        &lt;!DOCTYPE html&gt;
-                        &lt;html lang="en"&gt;
-                            &lt;head&gt;
-                                &lt;meta charset="utf-8" /&gt;
-                                &lt;title&gt;My CSS Tech Doc&lt;/title&gt;
-                            &lt;/head&gt;
-                            &lt;body&gt;
-                                &lt;h1 style="color: white; background-color: charcoal;"&gt;Inline Styles&lt;/h1&gt;
-                                &lt;p style="color: blue;"&gt;This is how you apply inline styles&lt;/p&gt;
-                            &lt;/body&gt;
-                        &lt;/html&gt;
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                            &lt;meta charset="utf-8" /&gt;
+                            &lt;title&gt;My CSS Tech Doc&lt;/title&gt;
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            &lt;h1 style="color: white; background-color: charcoal;"&gt;Inline Styles&lt;/h1&gt;
+                            &lt;p style="color: blue;"&gt;This is how you apply inline styles&lt;/p&gt;
+                        &lt;/body&gt;
+                    &lt;/html&gt;
                     </code></pre>
                     </p>
                     <p>As you can see this gets messy quickly and is <b>NOT</b> considered best practice. You may see this used if you have a very strict work environment, like a content management system that only allows editing of the HTML body. May also be used in emails to achieve compatibility with more clients.</p>
@@ -100,150 +101,235 @@
         <section id="What_Are_Selectors" class="main-section">
             <h2>What Are Selectors</h2>
             <p>The first part of a CSS rule is the CSS selector. Selectors will tell the browser which HTML element to apply the CSS rule to. There are several different selectors, they are; type, class, ID, attribute, pseudo-class, pseudo-element, and combinators.</p>
-            <ol>
+            <ul>
                 <li class="type_class_id">
                     <h3>Type, Class, and ID Selectors</h3>
                     <p>First we will discuss type, class, and ID selectors as these are the most common.</p>
-                    <ol>
+                    <ul>
                         <li>
                             <h4>Type Selectors</h4>
                             <p>A type selector directly targets an HTML element and will look something like this:
                             <pre><code>
-                                h1 {
-                                    color: blue;
-                                }
+                            h1 {
+                                color: blue;
+                            }
                             </code></pre>
                             This will target any <code>&lt;h1&gt;</code> elements within your stylesheets scope.</p>
                         </li>
                         <li>
                             <h4>Class Selectors</h4>
                             <p>A class selector is case sensitive and will target any HTML element that has the same value for its class attribute. Using a class a class would like like this:
-                                <pre><code>
-                                    HTML:
-                                    &lt;h1 class="example"&gt;Class&lt;/h1&gt;
-                                    &lt;p class="exmple"&gt;Selector&lt;/p&gt;
+                            <pre><code>
+                            HTML:
+                            &lt;h1 class="example"&gt;Class&lt;/h1&gt;
+                            &lt;p class="exmple"&gt;Selector&lt;/p&gt;
 
-                                    CSS:
-                                    .example {
-                                        color: purple;
-                                        background-color; yellow;
-                                    }
-                                </code></pre>
+                            CSS:
+                            .example {
+                                color: purple;
+                                background-color; yellow;
+                            }
+                            </code></pre>
                             This will target both the <code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> elements.
                             </p>
                         </li>
                         <li>
                             <h4>ID Selectors</h4>
                             <p>An ID selector is also case sensitive, but it is a bit special. Each ID has to be unique, meaning two elements can not have the same ID attribute value. Using an ID will look like such:
-                                <pre><code>
-                                    HTML:
-                                    &lt;h1 id="headline"&gt;ID Selector&lt;/h1&gt;
+                            <pre><code>
+                            HTML:
+                            &lt;h1 id="headline"&gt;ID Selector&lt;/h1&gt;
 
-                                    CSS:
-                                    #headline {
-                                        color: red;
-                                    }
-                                </code></pre>
+                            CSS:
+                            #headline {
+                                color: red;
+                            }
+                            </code></pre>
                             This will target only the <code>&lt;h1&gt;</code> element with the id attrivute value of "headline". Note this over rules any type and class selector rules applied.
                             </p>
                         </li>
-                    </ol>
+                    </ul>
                 </li>
                 <li class="attribute_selectors">
                     <h3>Attribute Selectors</h3>
                     <p>Next we have attribute selectors, these target HTML elements with certain attributes. Among atribute selectors, there are presence and value selectors and there are substring matching selectors.</p>
-                    <ol>
+                    <ul>
                         <li>
                             <h4>Presence and Value Selectors</h4>
                             <p>The presence and value selectors target elements based on the presence of an attribute alone, or matches several elements based on the value of the attribute. Here are some examples of presence and value selectors:
-                                <pre><code>
-                                    HTML:
-                                    &lt;h2&gt;Presence and Value Selectors&lt;/h2&gt;
+                            <pre><code>
+                            HTML:
+                            &lt;h2&gt;Presence and Value Selectors&lt;/h2&gt;
 
-                                    &lt;p&gt;Item 1&lt;/p&gt;
-                                    &lt;p class="a"&gt;Item 2&lt;/p&gt;
-                                    &lt;p class="a b"&gt;Item 3&lt;/p&gt;
-                                    &lt;p class="ab"&gt;Item 4&lt;/p&gt;
+                            &lt;p&gt;Item 1&lt;/p&gt;
+                            &lt;p class="a"&gt;Item 2&lt;/p&gt;
+                            &lt;p class="a b"&gt;Item 3&lt;/p&gt;
+                            &lt;p class="ab"&gt;Item 4&lt;/p&gt;
 
-                                    CSS:
-                                    p[class] {
-                                        font-size: 200%;
-                                    }
+                            CSS:
+                            p[class] {
+                                font-size: 200%;
+                            }
 
-                                    p[class="a"] {
-                                        background-color: cyan;
-                                    }
+                            p[class="a"] {
+                                background-color: cyan;
+                            }
 
-                                    p[class~="a"] {
-                                        color: charcoal;
-                                    }
-                                </code></pre>
+                            p[class~="a"] {
+                                color: charcoal;
+                            }
+                            </code></pre>
                             </p>
                             <p>In the example above, the first <code>&lt;p&gt;</code> element will not be selected as it has no class attribute. The second <code>&lt;p&gt;</code> element will have all effects added because it has a class, its class value is "a", and because the third rule applies to elements with a class of "a" but also searches for list rules, separated by white space. The third <code>&lt;p&gt;</code> element will have the first and third effect applied because it has a class, and it has a listed class value of "a" with white-space, but the second effect will not apply since it will only apply to a class value of "a". Lastly, the fourth <code>&lt;p&gt;</code> element will only have the the first effect since it has a class but the second rule is only searching for class "a" values and the third rule is looking for listed classes with "a" and whit-space, which "ab" does not have.</p>
                         </li>
                         <li>
                             <h4>Substring Selectors</h4>
                             <p>Substring selectors allow for more precise matching of substrings inside the value of your attribute. Here are a few examples of substring selectors:
-                                <pre><code>
-                                    HTML:
-                                    &lt;h1&gt;Substring Selectors&lt;/h1&gt;
-                                    &lt;p class="a"&gt;Item 1&lt;/p&gt;
-                                    &lt;p class="ab"&gt;Item 2&lt;/p&gt;
-                                    &lt;p class="bca"&gt;Item 3&lt;/p&gt;
-                                    &lt;p class="bcabc"&gt;Item 4&lt;/p&gt;
+                            <pre><code>
+                            HTML:
+                            &lt;h1&gt;Substring Selectors&lt;/h1&gt;
+                            &lt;p class="a"&gt;Item 1&lt;/p&gt;
+                            &lt;p class="ab"&gt;Item 2&lt;/p&gt;
+                            &lt;p class="bca"&gt;Item 3&lt;/p&gt;
+                            &lt;p class="bcabc"&gt;Item 4&lt;/p&gt;
 
-                                    CSS:
-                                    p[class^="a"] {
-                                        font-size: 200%;
-                                    }
+                            CSS:
+                            p[class^="a"] {
+                                font-size: 200%;
+                            }
 
-                                    p[class$="a"] {
-                                        background-color: cyan;
-                                    }
+                            p[class$="a"] {
+                                background-color: cyan;
+                            }
 
-                                    p[class*="a"] {
-                                        color: charcoal;
-                                    }
-                                </code></pre>
+                            p[class*="a"] {
+                                color: charcoal;
+                            }
+                            </code></pre>
                             </p>
                             <p>In the example above, our first css rule <code>p[class^="a"]</code> will apply to <b>any</b> attribute that starts with "a", so this will apply to the first two <code>&lt;p&gt;</code> elements. The second rule <code>p[class$="a"]</code> will apply to any attribute that ends with "a", so this will apply to the first and third <code>&lt;p&gt;</code> elements. Lastly, the third rule <code>p[class*="a"]</code> applies to any attribute where "a" appears in the string, so this rule will apply to all <code>&lt;p&gt;</code> elements.</p>
                         </li>
-                    </ol>
+                    </ul>
                 </li>
                 <li class="pseudo_class_and_element">
                     <h3>Pseudo-Class and Pseudo-Element Selectors</h3>
                     <p>The next type of selectors we will look at are called pseudo-classes and pseudo-elements. There are many of these, and they serve specific purposes.</p>
-                    <ol>
+                    <ul>
                         <li>
                             <h4>Pseudo-Classes</h4>
                             <p>Pseudo-classes select elements in a specific state. Pseudo-classes are identified by keywords beginning with a colon, and they act as if you applied a class to part of your document. Here are some examples of some pseudo-classes:
-                                <pre><code>
-                                    HTML:
-                                    &lt;article&gt;
-                                        &lt;p&gt;first child&lt;/p&gt;
-                                        &lt;p&gt;&lt;a href=""&gt;Hover Here&lt;/a&gt;&lt;/p&gt;
-                                        &lt;p&gt;last child&lt;/p&gt;
-                                    &lt;/article&gt;
+                            <pre><code>
+                            HTML:
+                            &lt;article&gt;
+                                &lt;p&gt;first child&lt;/p&gt;
+                                &lt;p&gt;&lt;a href=""&gt;Hover Here&lt;/a&gt;&lt;/p&gt;
+                                &lt;p&gt;last child&lt;/p&gt;
+                            &lt;/article&gt;
 
-                                    CSS:
-                                    article p:first-child {
-                                        font-size: 120%;
-                                    }
+                            CSS:
+                            article p:first-child {
+                                font-size: 120%;
+                            }
 
-                                    article p:last-child {
-                                        font-weight: bold;
-                                    }
+                            article p:last-child {
+                                font-weight: bold;
+                            }
 
-                                    a:hover {
-                                        color: green;
-                                    }
-                                </code></pre>
+                            a:hover {
+                                color: green;
+                            }
+                            </code></pre>
                             </p>
                             <p>In the example above, our first CSS rule <code>article p:first-child { font-size: 120%; }</code> will make the first <code>&lt;p&gt;</code> element slightly bigger. Now if we add a new <code>&lt;p&gt;</code> before it, the new <code>&lt;p&gt;</code> element will become the effected element because it is now the first-child element. Likewise our second rule <code>article p:last-child { font-weight: bold; }</code> only applies to the last <code>&lt;p&gt;</code> element inside <code>&lt;article&gt;</code> and will apply to a new <code>&lt;p&gt;</code> element if it is applied after the current last <code>&lt;p&gt;</code> element. Lastly the <code>&lt;a&gt;</code> element will only change to green when hovered over due to the <code>:hover</code> class in our last rule, <code>a:hover { color: green; }</code>.</p>
                         </li>
-                    </ol>
+                        <li>
+                            <h4>Pseudo-Elements</h4>
+                            <p>Pseudo-elements start with a double colon, and act as if you added a new element into the document. One example of this would be:
+                            <pre><code>
+                            HTML:
+                            &lt;article&gt;
+                                &lt;p&gt;You could try this with a &lt;span&gt;element wrapped around the presumed first line.&lt;/p&gt;
+                                &lt;p&gt;However we don't always know how many words will fit on a line, especially on different screens&lt;/p&gt;
+                            &lt;/article&gt;
+
+                            CSS:
+                            article p::first-line {
+                                font-size: 125%;
+                                font-weight: bold;
+                            }
+                            </code></pre>
+                            </p>
+                            <p>This approach will reliably only apply to the first line of each paragraph tag. If you wished to only affect the first line of the first <code>&lt;p&gt;</code> element, we could combine selectors, like such:
+                            <pre><code>
+                            article p:first-child::first-line {
+                                font-size: 125%;
+                                font-weight: bold;
+                            }
+                            </code></pre>
+                            </p>
+                            <p>There are many <a href="">pseudo-classes</a> and <a href="">pseudo-elements</a>, have a look and see what you can do with them.</p>
+                        </li>
+                    </ul>
                 </li>
-            </ol>
+                <li class="combinators">
+                    <h3>Combinators</h3>
+                    <p>The last selector type we will look at are combinators. These allow us to select elements based on location of other elements (i.e. child or sibling). For these we have descendant combinator, child combinator, next-sibling combinator, and subsequent-sibling combinator.</p>
+                    <ul>
+                        <li>
+                            <h4>Descendant Combinator</h4>
+                            <p>The descendant combinator is represented by a single space between two selectors. Using a descendant combinator will apply the CSS rule to <b>any</b> element matching the second selectors that are <i>inside</i> elements matching the first selector. This would look something like this:
+                            <pre><code>
+                            HTML:
+                            &lt;p&gt;I'm not selected&lt;/p&gt;
+                            &lt;article&gt;
+                                &lt;p&gt;But I am&lt;/p&gt;
+                            &lt;/article&gt;
+                            &lt;p&gt;I'm not either&lt;/p&gt;
+
+                            CSS:
+                            article p {
+                                color: blue;
+                            }
+                            </code></pre>
+                            </p>
+                            <p>In the exmple above, the first and third <code>&lt;p&gt;</code> elements will not be selected because they're not inside the <code>&lt;article&gt;</code> element, however the second <code>&lt;p&gt;</code> element will be.</p>
+                        </li>
+                        <li>
+                            <h4>Child Combinator</h4>
+                            <p>The child combinator act similar, but more strict and is used by placing <code>&gt;</code> betweem two selectors. This will match elements to the second selector, that are direct children of the first selector. Her is how this might look:
+                            <pre><code>
+                            HTML:
+                            &lt;ol&gt;
+                                &lt;li&gt;Item 1&lt;/li&gt;
+                                &lt;li&gt;Item 2&lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;ul&gt;
+                                        &lt;li&gt;Unordered Item 1&lt;/li&gt;
+                                        &lt;li&gt;Unordered Item 2&lt;/li&gt;
+                                    &lt;/ul&gt;
+                                &lt;/li&gt;
+                            &lt;/ol&gt;
+
+                            CSS:
+                            ol &gt; li {
+                                color: purple;
+                            }
+                            </code></pre>
+                            </p>
+                            <p>In this example, only Item 1 and item 2 will have purple text, because they are direct children of the <code>&lt;ol&gt;</code> element, whereas the Unordered Items are further descendants and will not be affected.</p>
+                        </li>
+                        <li>
+                            <h4>Next-Sibling Combinator</h4>
+                            <p>The next-sibling combinator uses <code>+</code> between two selectors and it matches elements matching the second selector that immediately follow an element matching the first selector. An example of this might look like this:
+                            <pre><code>
+                            HTML:
+                            &lt;h1&gt;In thios example&lt;/h1&gt;
+                            &lt;p&gt;This element gets affected&lt;/p&gt;
+                            </code></pre></p>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </section>
         <section id="Properties_And_Values" class="main-section">
             <h2></h2>

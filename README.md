@@ -15,6 +15,8 @@ My [tribute page](https://github.com/D-Johnson89/freeCodeCamp/tree/main/tributeP
 
 ### [Technical Documentation Page](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-technical-documentation-page-project/build-a-technical-documentation-page)
 
+My [technical documentation](https://github.com/D-Johnson89/freeCodeCamp/tree/main/technicalDoc) is about CSS.
+
 ### [Project Landing Page](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-product-landing-page-project/build-a-product-landing-page)
 
 ### [Personal Portfolio Webpage](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-personal-portfolio-webpage-project/build-a-personal-portfolio-webpage)
