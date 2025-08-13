@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <nav id="nav-bar"></nav>
@@ -22,7 +23,7 @@
         </nav>
         <section id="Introduction" class="main-section">
             <h2>Introduction</h2>
-            <p>CSS (<i>Cascading Style Sheets</i>) is the next language you should learn after HTML. Where HTML gives your page structure, CSS provides the layout and style. Cascading Stle Sheets give you the ability to alter the font, control the spacing, all the way up to adding animation.</p>
+            <p>CSS (<i>Cascading Style Sheets</i>) is the next language you should learn after HTML. Where HTML gives your page structure, CSS provides the layout and style. Cascading Style Sheets give you the ability to alter the font, control the spacing, all the way up to adding animation.</p>
             <p>This documentation is intended to be a short, beginner friendly introduction to CSS. Moving forawrd, we will cover some pre-requisites, how to apply your CSS, different selectors, properties and values, and some organizational tips.</p>
         </section>
         <section id="Pre_Requisites" class="main-section">
@@ -40,13 +41,17 @@
         </section>
         <section id="Applying_CSS" class="main-section">
             <h2>Applying CSS</h2>
-            <p>There are three ways you can add CSS you your document, the most common and practical is to link an external stylesheet. Next you can apply it in a style section, in the head section of the document itself. Lastly we have inline styles, which is done by adding a style attribute to an individual HTML element, this is <b>NOT</b> considered best practice.</p>
+            <p>There are three ways you can add CSS you your document, the most common and practical is to link an <a href="#stylesheets">external stylesheet</a>. Next you can apply it in a <a href="#style_section">style section</a>, in the head section of the document itself. Lastly we have <a href="#inline_styles">inline styles</a>, which is done by adding a style attribute to an individual HTML element, this is <b>NOT</b> considered best practice.</p>
             <ol>
-                <li class="stylesheets">
+                <li class="apply_styles" id="stylesheets">
                     <h3>External StyleSheets</h3>
                     <p>Let's start with applying CSS with external stylesheets. You will need to add it in the head <code>(&lt;head&gt;&lt;/head&gt;)</code> section. First you will need to add the link tag with a relationship and location in the rel and href properties respectively.</p>
                     <p>It should look like this:
-                    <pre><code>&lt;link rel="stylessheet" href="styles.css" /&gt;</code></pre>
+                    <pre><code>
+                    &lt;head&gt;
+                        &lt;link rel="stylessheet" href="styles.css" /&gt;
+                    &lt;/head&gt;
+                    </code></pre>
                     </p>
                     <p>Remember, it must be placed inside the head section. To actually see some style take effect, let's add something to your CSS. Inside your styles.css file, add the following code:
                     <pre><code>
@@ -55,7 +60,7 @@
                     }</code></pre></p>
                     <p>Now, save both files and reload your page, the background should be yellow. If it is not, simply make sure everything is typed correctly and that the CSS file is linked correctly inside the head section.</p>
                 </li>
-                <li class="style_section">
+                <li class="apply_styles" id="style_section">
                     <h3>Style Section</h3>
                     <p>Next we will look at adding your styles to a style setion in the head section of the document, also called internal stylesheets.</p>
                     <p>This will look somethin like this:
@@ -73,10 +78,10 @@
                     &lt;/head&gt;
                     </code></pre>
                     </p>
-                    <p>There are times when using an internal stylesheet can be useful, maybe you just need a quick jist of some styleto use wjile working on your project before doing the main stylesheet. There may also be situations where you areblocked from modifying the external stylesheets, like when working with content management systems.</p>
+                    <p>There are times when using an internal stylesheet can be useful, maybe you just need a quick jist of some style to use while working on your project before doing the main stylesheet. There may also be situations where you are blocked from modifying the external stylesheets, like when working with content management systems.</p>
                     <p>The downside to internal stylesheets is you would need one for every page. For bigger sites, this could quickly become inconvenient for maintenance amd updating.</p>
                 </li>
-                <li class="inline_styles">
+                <li class="apply_styles" id="inline_styles">
                     <h3>Inline Styles</h3>
                     <p>The last way we will look at add CSS to a project is using inline styles. Inline styles are typically applied with a style attribute, and only affect the HTML element applied to.</p>
                     <p>Using inline styles will look something like this:
@@ -100,9 +105,9 @@
         </section>
         <section id="What_Are_Selectors" class="main-section">
             <h2>What Are Selectors</h2>
-            <p>The first part of a CSS rule is the CSS selector. Selectors will tell the browser which HTML element to apply the CSS rule to. There are several different selectors, they are; type, class, ID, attribute, pseudo-class, pseudo-element, and combinators.</p>
+            <p>The first part of a CSS rule is the CSS selector. Selectors will tell the browser which HTML element to apply the CSS rule to. There are several different selectors, they are; <a href="#type_class_id">type, class, ID</a>, <a href="#attribute_selectors">attribute</a>, <a href="#pseudo_class_and_element">pseudo-class, pseudo-element</a>, and <a href="#combinators">combinators</a>.</p>
             <ul>
-                <li class="type_class_id">
+                <li class="selectors" id="type_class_id">
                     <h3>Type, Class, and ID Selectors</h3>
                     <p>First we will discuss type, class, and ID selectors as these are the most common.</p>
                     <ul>
@@ -122,7 +127,7 @@
                             <pre><code>
                             HTML:
                             &lt;h1 class="example"&gt;Class&lt;/h1&gt;
-                            &lt;p class="exmple"&gt;Selector&lt;/p&gt;
+                            &lt;p class="example"&gt;Selector&lt;/p&gt;
 
                             CSS:
                             .example {
@@ -150,7 +155,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="attribute_selectors">
+                <li class="selectors" id="attribute_selectors">
                     <h3>Attribute Selectors</h3>
                     <p>Next we have attribute selectors, these target HTML elements with certain attributes. Among atribute selectors, there are presence and value selectors and there are substring matching selectors.</p>
                     <ul>
@@ -211,7 +216,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="pseudo_class_and_element">
+                <li class="selectors" id="pseudo_class_and_element">
                     <h3>Pseudo-Class and Pseudo-Element Selectors</h3>
                     <p>The next type of selectors we will look at are called pseudo-classes and pseudo-elements. There are many of these, and they serve specific purposes.</p>
                     <ul>
@@ -267,11 +272,11 @@
                             }
                             </code></pre>
                             </p>
-                            <p>There are many <a href="">pseudo-classes</a> and <a href="">pseudo-elements</a>, have a look and see what you can do with them.</p>
+                            <p>There are many <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank">pseudo-classes</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank">pseudo-elements</a>, have a look and see what you can do with them.</p>
                         </li>
                     </ul>
                 </li>
-                <li class="combinators">
+                <li class="selectors" id="combinators">
                     <h3>Combinators</h3>
                     <p>The last selector type we will look at are combinators. These allow us to select elements based on location of other elements (i.e. child or sibling). For these we have descendant combinator, child combinator, next-sibling combinator, and subsequent-sibling combinator.</p>
                     <ul>
@@ -316,27 +321,143 @@
                             }
                             </code></pre>
                             </p>
-                            <p>In this example, only Item 1 and item 2 will have purple text, because they are direct children of the <code>&lt;ol&gt;</code> element, whereas the Unordered Items are further descendants and will not be affected.</p>
+                            <p>In this example, only Item 1 and Item 2 will have purple text, because they are direct children of the <code>&lt;ol&gt;</code> element, whereas the Unordered Items are further descendants and will not be affected.</p>
                         </li>
                         <li>
                             <h4>Next-Sibling Combinator</h4>
                             <p>The next-sibling combinator uses <code>+</code> between two selectors and it matches elements matching the second selector that immediately follow an element matching the first selector. An example of this might look like this:
                             <pre><code>
                             HTML:
-                            &lt;h1&gt;In thios example&lt;/h1&gt;
+                            &lt;h1&gt;In this example&lt;/h1&gt;
                             &lt;p&gt;This element gets affected&lt;/p&gt;
+                            &lt;h1&gt;But if you notice&lt;/h1&gt;
+                            &lt;h2&gt;This element&lt;/h2&gt;
+                            &lt;p&gt;does not&lt;/p&gt;
+                            &lt;h1&gt;However as you can see&lt;/h1&gt;
+                            &lt;p&gt;this element is affected as well&lt;/p&gt;
+
+                            CSS:
+                            h1 + p {
+                                font-weight: bold;
+                                background-color: charcoal;
+                                color: cyan;
+                            }
                             </code></pre></p>
+                            <p>As you will see, only the first and third <code>&lt;p&gt;</code> elements will be affected, that is because the <code>&lt;h2&gt;</code> element is what <i>immediately</i> follows the secode <code>&lt;h1&gt;</code> element.</p>
+                        </li>
+                        <li>
+                            <h4>Subsequent-Sibling Combinator</h4>
+                            <p>The last combinator we will look at is the subsequent-sibling combinator. The subsequent-sibling combinator uses <code>~</code> between two selectors, and will match all elements of the second selector coming <b>anywhere</b> after the first selector. An example of this might look like this:
+                            <pre><code>
+                            HTML:
+                            &lt;p&gt;Unaffected element&lt;/p&gt;
+                            &lt;h2&gt;First target selector&lt;/h2&gt;
+                            &lt;p&gt;First affected element&lt;/p&gt;
+                            &lt;br&gt;
+                            &lt;p&gt;Second affected element&lt;/p&gt;
+
+                            CSS:
+                            h2 ~ p {
+                                font-size: 85%;
+                                background-color: charcoal;
+                                color: cyan;
+                            }
+                            </code></pre></p>
+                            <p>As you can see, the first <code>&lt;p&gt;</code> element is not affected because it is <i>before</i> the <code>&lt;h2&gt;</code> element. However the second and third <code>&lt;p&gt;</code> elements are affected because they come <i>after</i> the <code>&lt;h2&gt;</code> element, regardless of the <code>&lt;br&gt;</code> element.</p>
+                        </li>
+                    </ul>
+                    <p>This is just a brief overview of the use of selectors, for a more in-depth dive on how to use and/or combine selectors click <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators" target="_blank">here</a>. For a full list of selectors, click <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Selector_list" target="_blank">here</a>.</p>
+                </li>
+            </ul>
+        </section>
+        <section id="Properties_And_Values" class="main-section">
+            <h2>Properties And Values</h2>
+            <p>All of CSS works by matching declarations, which are property and value pairs, to their intended element of a page. Properties have certain value types they are allowed, some can use multiple types. First we will go over some common value types and units like <a href="#numeric">numeric</a>, <a href="#color">color</a>, <a hrwf="#image">image</a>, and <a href="#position">position</a>. Then we will look at some commonly used CSS <a href="#properties">properties</a> in which you would see such values.</p>
+            <ul>
+                <li class="value_types" id="numeric">
+                    <h3>Numeric Types</h3>
+                    <p>First we will look at numeric types.</p>
+                    <table>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;integer&gt;</code></td>
+                            <td>A whole number like <code>2025</code> or <code>-99</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;number&gt;</code></td>
+                            <td>A decimal number, may or may not have a fractional component like <code>0.33</code>, <code>107</code>, or <code>-7.5</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;dimension&gt;</code></td>
+                            <td>A <code>&lt;number&gt;</code> with a unit. this is an umbrella category that includes <code>&lt;length&gt;</code>, <code>&lt;angle&gt;</code>, <code>&lt;time&gt;</code>, and <code>&lt;resolution&gt;</code>. Such as <code>90deg</code>, <code>10s</code>, or <code>25px</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;percentage&gt;</code></td>
+                            <td>Represents a fraction relative to another quality. For example, an elements height would be relative to its parent elements height.</td>
+                        </tr>
+                    </table>
+                </li>
+                <li class="value_types" id="color">
+                    <h3>Color</h3>
+                    <p>Color is really only one <i>value type</i>, but there are several options on how to input this value. We will go over a few common ways like using keywords, hexidecimal codes, and <code>rgb()</code> values.</p>
+                    <ul>
+                        <li>
+                            <h4>Keywords</h4>
+                            <p>The first option is the <code>&lt;named-color&gt;</code> value, however this option is not typically used in production applications. Using <code>&lt;named-color&gt;</code> values is typically used in courses amd tutorials so the learner can focus on coding and knows what color should appear.</p>
+                        </li>
+                        <li>
+                            <h4>Hexidecimal Values</h4>
+                            <p>The next option is hexidecimal RGB values, using a combination of 16 characters from <code>0</code> - <code>9</code> and <code>a</code> - <code>f</code>, making the entire range <code>0123456789abdcef</code>. Every hex color value consists of a hash/pound symbol (<code>#</code>) and 6 hexidecimal characters, for example <code>#ffc0cb</code>. These hexidecimal characters are in pairs, representing the different RGB channels of color; Red, Green, Blue.</p>
+                        </li>
+                        <li>
+                            <h4>The <code>rgb()</code> Function</h4>
+                            <p>Another common option is the <code>rgb()</code> function, which takes three parameter values for red, green, and blue, with an optional fourth value for opacity when separated by a slash (<code>/</code>). Each parameter can be in a range from <code>0</code> - <code>255</code> or <code>0%</code> - <code>100%</code> but not a combination of the two, for example <code></code>.</p>
+                        </li>
+                    </ul>
+                    <p>There are several other ways to apply color, if you want to look at more options, click <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color" target="_blank">here</a>.</p>
+                </li>
+                <li class="value_types" id="image">
+                    <h3>Image</h3>
+                    <p>Another value type is <code>&lt;image&gt;</code>s, this can be a <code>url()</code> function pointing to an image or a gradient. There are some newer <code>&lt;image&gt;</code> values, but they currently have poor browser support.</p>
+                </li>
+                <li class="value_types" id="position">
+                    <h3>Position</h3>
+                    <p>The <code>&lt;position&gt;</code> value type is used to set an item to a set of 2D coordinates. A <code>&lt;position&gt;</code> value typically consists of two values, the first setting it horizontally and the second vertically. These values can be <code>&lt;length&gt;</code>s, which represent the offset from the left and top edges of the box, or keywords, which are <code>&lt;center&gt;</code>, <code>&lt;top&gt;</code>, <code>&lt;left&gt;</code>, <code>&lt;bottom&gt;</code>, and <code>&lt;right&gt;</code>. If only one axis is specified, the other will default to center.</p>
+                </li>
+                <li class="value_types" id="properties">
+                    <h3>Properties</h3>
+                    <p>These are your basic value types, and from here we can look at some common properties we would apply these. If you want to look at some of the more advanced value types, click <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#strings_and_identifiers" target="_blank">here</a>.</p>
+                    <ul>
+                        <li>
+                            <h4>Numeric Types</h4>
+                            <p>Numeric types have a wide use range, from describing length (i.e. <code>&lt;width&gt;</code>, <code>&lt;heigth&gt;</code>, <code>&lt;margin&gt;</code>, ect) to defining the amount of color in <code>&lt;rgb()&gt;</code> color function. It is important to note that when using percentages, that element will be refering to its parent element.</p>
+                        </li>
+                        <li>
+                            <h4>Color Types</h4>
+                            <p>Color types are used to change font <code>&lt;color&gt;</code> or <code>&lt;background-color&gt;</code>, <code>&lt;box-shadow&gt;</code> and gradient options</p>
+                        </li>
+                        <li>
+                            <h4>Image Types</h4>
+                            <p>Image types can be used to simply add a picture or apply to the background of an element with <code>&lt;background-image&gt;</code>.</p>
+                        </li>
+                        <li>
+                            <h4>Position Types</h4>
+                            <p>the position type is used to specify where you want an element for more precise styling</p>
                         </li>
                     </ul>
                 </li>
             </ul>
         </section>
-        <section id="Properties_And_Values" class="main-section">
-            <h2></h2>
-        </section>
         <section id="Organization" class="main-section">
-            <h2></h2>
+            <h2>Organization</h2>
+            <p>There is no right or wrong way to organize your CSS, though inline styles is considered <b>not</b> best practice, the biggest key is consistency. Having a consistent set of rules will help save time and mental overhead, thus deciding on indentation, naming convention, and file structure beforehand can help. For structure, it cam be helpful to comment your code so you can easily see what each section of styles applies to. Also it wouldn't hurt to structure styles with all of your default styles first, then utilities (action styles), then page specific (market page vs settings page), and then item or componjent specific if needed. With this you should have a basic understanding of how to start styling and structuring your page, go experiment with your own code and see what you can do.</p>
         </section>
+        <footer>
+            <blockquote>Reference: Mozilla Developer Network (https://developer.mozilla.org/)</blockquote>
+        </footer>
     </main>
 </body>
 </html>
