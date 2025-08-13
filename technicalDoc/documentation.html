@@ -7,27 +7,26 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <nav id="nav-bar"></nav>
     <main id="main-doc">
-        <nav>
-            <h2>CSS Documentation</h2>
+        <nav id="navbar">
+            <header>CSS Documentation</header>
             <ul>
-                <li><a href="#Introduction">Introduction</a></li>
-                <li><a href="#Pre_Requisites">Pre-Requisites</a></li>
-                <li><a href="#What_Is_CSS">What Is Css</a></li>
-                <li><a href="#Applying_CSS">Appying CSS</a></li>
-                <li><a href="#What_Are_Selectors">What Are Selectors</a></li>
-                <li><a href="#Properties_And_Values">Properties and Values</a></li>
+                <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+                <li><a class="nav-link" href="#Pre-Requisites">Pre-Requisites</a></li>
+                <li><a class="nav-link" href="#What_Is_CSS">What Is Css</a></li>
+                <li><a class="nav-link" href="#Applying_CSS">Applying CSS</a></li>
+                <li><a class="nav-link" href="#What_Are_Selectors">What Are Selectors</a></li>
+                <li><a href="#Properties_And_Values">Properties And Values</a></li>
                 <li><a href="#Organization">Organization</a></li>
             </ul>
         </nav>
         <section id="Introduction" class="main-section">
-            <h2>Introduction</h2>
+            <header>Introduction</header>
             <p>CSS (<i>Cascading Style Sheets</i>) is the next language you should learn after HTML. Where HTML gives your page structure, CSS provides the layout and style. Cascading Style Sheets give you the ability to alter the font, control the spacing, all the way up to adding animation.</p>
             <p>This documentation is intended to be a short, beginner friendly introduction to CSS. Moving forawrd, we will cover some pre-requisites, how to apply your CSS, different selectors, properties and values, and some organizational tips.</p>
         </section>
-        <section id="Pre_Requisites" class="main-section">
-            <h2>Pre-Requisites</h2>
+        <section id="Pre-Requisites" class="main-section">
+            <header>Pre-Requisites</header>
             <p>Prior to venturing into CSS you should have:</p>
             <ul>
                 <li>Basic experience with computers and using the internet</li>
@@ -36,11 +35,11 @@
             </ul>
         </section>
         <section id="What_Is_CSS" class="main-section">
-            <h2>What is CSS?</h2>
+            <header>What Is CSS?</header>
             <p>CSS (<i>Cascading Style Sheets</i>) is a rule based language that is defined by specifying groups of styles that get applied to specific elements or even groups of elements on your web page. CSS gives you the ability to make amazing looking web pages by specifying how a document is layed out and styled.</p>
         </section>
         <section id="Applying_CSS" class="main-section">
-            <h2>Applying CSS</h2>
+            <header>Applying CSS</header>
             <p>There are three ways you can add CSS you your document, the most common and practical is to link an <a href="#stylesheets">external stylesheet</a>. Next you can apply it in a <a href="#style_section">style section</a>, in the head section of the document itself. Lastly we have <a href="#inline_styles">inline styles</a>, which is done by adding a style attribute to an individual HTML element, this is <b>NOT</b> considered best practice.</p>
             <ol>
                 <li class="apply_styles" id="stylesheets">
@@ -104,7 +103,7 @@
             </ol>
         </section>
         <section id="What_Are_Selectors" class="main-section">
-            <h2>What Are Selectors</h2>
+            <header>What Are Selectors</header>
             <p>The first part of a CSS rule is the CSS selector. Selectors will tell the browser which HTML element to apply the CSS rule to. There are several different selectors, they are; <a href="#type_class_id">type, class, ID</a>, <a href="#attribute_selectors">attribute</a>, <a href="#pseudo_class_and_element">pseudo-class, pseudo-element</a>, and <a href="#combinators">combinators</a>.</p>
             <ul>
                 <li class="selectors" id="type_class_id">
@@ -371,7 +370,7 @@
             </ul>
         </section>
         <section id="Properties_And_Values" class="main-section">
-            <h2>Properties And Values</h2>
+            <header>Properties And Values</header>
             <p>All of CSS works by matching declarations, which are property and value pairs, to their intended element of a page. Properties have certain value types they are allowed, some can use multiple types. First we will go over some common value types and units like <a href="#numeric">numeric</a>, <a href="#color">color</a>, <a hrwf="#image">image</a>, and <a href="#position">position</a>. Then we will look at some commonly used CSS <a href="#properties">properties</a> in which you would see such values.</p>
             <ul>
                 <li class="value_types" id="numeric">
@@ -452,7 +451,7 @@
             </ul>
         </section>
         <section id="Organization" class="main-section">
-            <h2>Organization</h2>
+            <header>Organization</header>
             <p>There is no right or wrong way to organize your CSS, though inline styles is considered <b>not</b> best practice, the biggest key is consistency. Having a consistent set of rules will help save time and mental overhead, thus deciding on indentation, naming convention, and file structure beforehand can help. For structure, it cam be helpful to comment your code so you can easily see what each section of styles applies to. Also it wouldn't hurt to structure styles with all of your default styles first, then utilities (action styles), then page specific (market page vs settings page), and then item or componjent specific if needed. With this you should have a basic understanding of how to start styling and structuring your page, go experiment with your own code and see what you can do.</p>
         </section>
         <footer>
