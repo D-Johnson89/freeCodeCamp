@@ -1,1 +1,1 @@
-Documentation Page for "CSS". This tribute page is the third required project from [freeCodeCamp](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-technical-documentation-page-project/build-a-technical-documentation-page)'s Responsive Web Design certificate course.
+Documentation Page for "CSS". This technical document is the third required project from [freeCodeCamp](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-technical-documentation-page-project/build-a-technical-documentation-page)'s Responsive Web Design certificate course.
