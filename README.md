@@ -19,4 +19,6 @@ My [technical documentation](https://github.com/D-Johnson89/freeCodeCamp/tree/ma
 
 ### [Project Landing Page](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-product-landing-page-project/build-a-product-landing-page)
 
+My [landing page]() is about .
+
 ### [Personal Portfolio Webpage](https://www.freecodecamp.org/learn/2022/responsive-web-design/build-a-personal-portfolio-webpage-project/build-a-personal-portfolio-webpage)
