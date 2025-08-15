@@ -5,6 +5,7 @@ body {
     color: #d9d9d9;
     width: calc(100% - 150px);
     line-height: 2;
+    padding-top: 20px;
 }
 
 a {
@@ -29,8 +30,6 @@ header {
 footer {
     text-align: center;
 }
-
-/* --- Utility Styles ---*/
 
 /* --- Site-Wide Styles ---*/
 #main-doc {
@@ -84,6 +83,62 @@ pre code {
     display: block;
 }
 
+#mobile-nav {
+    display: none;
+}
 
+/* --- Utility Styles ---*/
+@media (max-width: 600px) {
+    #navbar {
+        display: none;
+    }
 
-/* --- Specific Styles ---*/
+    #main-doc {
+        max-width: fit-content;
+        margin: 30PX auto;
+        border: none;
+    }
+
+    #mobile-nav {
+        display: flex;
+        justify-content: end;
+        overflow: hidden
+    }
+
+    #mobile-nav a {
+        float: right;
+        text-align: center;
+        padding: 14px 16px;
+        margin-right: 250px;
+    }
+
+    .dropdown {
+        float: right;
+        overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+        border: none;
+        outline: none;
+        padding: 14px 16px;
+        margin: 0;
+    }
+
+    .drop-content {
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        z-index: 1;
+    }
+
+    .drop-content a {
+        float: none;
+        padding: 12px 16px;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown:hover .drop-content {
+        display: block;
+    }
+}
