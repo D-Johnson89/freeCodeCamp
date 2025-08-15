@@ -1,0 +1,12 @@
+/* --- General Styles ---*/
+a {
+    text-decoration: none;
+}
+
+/* --- Specified Styles --- */
+#header-img {
+    width: 200px;
+}
+
+
+/* --- Utiliy Styles --- */
