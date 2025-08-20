@@ -1,13 +1,36 @@
 /* --- General Styles ---*/
 body {
     background-color: #d9d9d9;
+    text-align: center;
 }
 
 a {
     text-decoration: none;
 }
 
+.topper, .feature {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.btn {
+    height: 35px;
+    margin: 12px 0;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
 /* --- Specified Styles --- */
+.nav-link {
+    margin: 0 5px;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
 #header {
     position: fixed;
     top: 0;
@@ -24,19 +47,56 @@ a {
 }
 
 #nav-bar {
-    margin-left: 60vw;
-}
-    
-.topper {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 150px;
+    margin-left: 55vw;
 }
 
-#form {
-    display: block
+.topper {
+     flex-direction: column;
+     height: 150px;
 }
+
+#email {
+    max-width: 275px;
+    width: 100%;
+    padding: 3px;
+    margin: 3px 0;
+}
+
+#submit {
+    max-width: 100px;
+    width: 100%;
+}
+
+#Features {
+    display: block;
+    max-width:80%;
+    margin-bottom: 30px;
+}
+
+.feature {
+    margin: 10px auto;
+}
+
+.icon {
+    flex-basis: 30%;
+}
+
+#Pricing {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.product {
+    border: 2px solid black;
+    flex-basis: 20%;
+
+}
+
+.details {
+    list-style-type: none;
+    margin-right: 40px;
+}
+
 /* --- Utiliy Styles --- */
