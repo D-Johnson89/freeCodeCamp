@@ -67,7 +67,7 @@ a {
     width: 100%;
 }
 
-#Features {
+#features {
     display: block;
     max-width:80%;
     margin-bottom: 30px;
@@ -81,7 +81,7 @@ a {
     flex-basis: 30%;
 }
 
-#Pricing {
+#pricing {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
