@@ -123,7 +123,7 @@ HERO SECTION
 
 .name {
     font-size: 2.1rem;
-    color: var(--accent-red);
+    color: var(--primary-white);
     margin: .8rem auto;
 }
 
@@ -157,8 +157,8 @@ PROJECTS SECTION
 .project-section-header {
     font-size: 2.3rem;
     max-width: 650px;
-    color: var(--accent-red);
-    border-bottom: 2px solid var(--primary-black);
+    color: var(--primary-white);
+    border-bottom: 2px solid var(--accent-red);
     margin-bottom: 3rem;
     justify-self: center;
 }
