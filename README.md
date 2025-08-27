@@ -26,7 +26,14 @@ The [portfolio page](https://github.com/D-Johnson89/portfolio) project (project 
 
     My [landing page](https://d-johnson89.github.io/portfolio/landingPage/index.html) is about racing tires.
 
+---
 
+## Addition Projects:
+
+- ### **Hackathon Full-Stack Application** 
+    Coolaborative full-stack web application built during a month-long hackathon event. A mental health journaling app built using MongoDB, Express, React, and Node (MERN).
+    **Repository:** https://github.com/freeCodeCamp-2025-Summer-Hackathon/purple-array
+    
 ---
 
 ## Technologies Used:
